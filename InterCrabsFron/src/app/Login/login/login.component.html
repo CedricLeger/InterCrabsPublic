@@ -5,12 +5,19 @@
         </mat-card>
         <mat-form-field>
             <mat-label>Pseudo</mat-label>
-        <input matInput [(ngModel)]="pseudo">
+        <input matInput name="pseudo" [(ngModel)]="pseudo" required>
         </mat-form-field> <br>
         <mat-form-field>
             <mat-label>Mot de passe</mat-label>
-        <input matInput [(ngModel)]="mdp">
-        </mat-form-field>
+        <input matInput type="password" [(ngModel)]="mdp" required>
+        </mat-form-field> <br>
+            <mat-card>
+             <mat-label> (seulement en cas d'inscription)</mat-label> <br>
+                 <mat-form-field>
+                     <mat-label> Confirmer mot de passe </mat-label> <br>
+                        <input matInput type="password" [(ngModel)]="confirmMdp">
+                    </mat-form-field> 
+            </mat-card>
         <mat-card-actions>
             <button mat-button (click)="inscription()">Inscription</button>
             <button mat-button (click)="connexion()">Connexion</button>
