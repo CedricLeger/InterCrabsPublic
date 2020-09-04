@@ -1,10 +1,19 @@
 <div>
-    <p>login works!</p>
-</div>
-<div>
-    <h1> Veuillez vous connecter pour acceder au site</h1>
-    <label> Pseudo : </label>
-    <input type="Text"/><br>
-    <label> MDP : </label>
-    <input type="Text"/>
+    <mat-card>
+        <mat-card> 
+            <h4>Veuillez vous connecter ou vous inscrire pour acceder au site ! merci :)</h4> 
+        </mat-card>
+        <mat-form-field>
+            <mat-label>Pseudo</mat-label>
+        <input matInput [(ngModel)]="pseudo">
+        </mat-form-field> <br>
+        <mat-form-field>
+            <mat-label>Mot de passe</mat-label>
+        <input matInput [(ngModel)]="mdp">
+        </mat-form-field>
+        <mat-card-actions>
+            <button mat-button (click)="inscription()">Inscription</button>
+            <button mat-button (click)="connexion()">Connexion</button>
+          </mat-card-actions>
+    </mat-card>
 </div>
